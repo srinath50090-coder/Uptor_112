@@ -72,7 +72,6 @@ df['Diabetes'] = ordinal_encoder.fit_transform(df[['Diabetes']])
 
 df['Smoking'] = label_encoder.fit_transform(df['Smoking'])
 
-
 # print(df.shape)
 # print(df.info())
 df.to_csv('Pre-Processed_Medical_Students_dataset.csv', index=False)
