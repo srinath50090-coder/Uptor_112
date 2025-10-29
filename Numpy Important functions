@@ -1,0 +1,305 @@
+============================================== 2. Creating Arrays =====================================================================================================================
+
+
+| Function                                             | Parameters                                | Explanation                                                        |
+| ---------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------ |
+
+| **np.array(object, dtype=None, copy=True, ndmin=0)** | `object`: list/tuple; `dtype`: data type  | Converts lists, tuples, or sequences into NumPy arrays             |
+
+| **np.zeros(shape, dtype=float)**                     | `shape`: tuple; `dtype`: type of elements | Creates an array filled with zeros                                 |
+
+| **np.ones(shape, dtype=float)**                      | `shape`: tuple; `dtype`: type of elements | Creates an array filled with ones                                  |
+
+| **np.empty(shape, dtype=float)**                     | `shape`: tuple; `dtype`: type             | Creates an uninitialized array (faster but contains random values) |
+
+| **np.arange(start, stop, step, dtype=None)**         | `start`, `stop`, `step`                   | Creates evenly spaced values within a range                        |
+
+| **np.linspace(start, stop, num=50, dtype=None)**     | `num`: number of samples                  | Creates evenly spaced samples between start and stop               |
+
+| **np.logspace(start, stop, num=50, base=10)**        | `base`: log base                          | Creates log-spaced numbers (useful for plotting log scales)        |
+
+| **np.full(shape, fill_value, dtype=None)**           | `fill_value`: constant value              | Creates an array filled with a specific value                      |
+
+| **np.eye(N, M=None, dtype=float)**                   | Identity matrix                           | Creates an identity matrix (used in linear algebra)                |
+
+| **np.random.rand(d0, d1, …)**                        | dimensions                                | Random samples in [0,1)                                            |
+
+| **np.random.randn(d0, d1, …)**                       | dimensions                                | Random samples from normal distribution (mean=0, std=1)            |
+
+| **np.random.randint(low, high, size, dtype)**        | random integers                           | Useful for simulations or sampling                                 |
+
+
+
+
+==================================== 3. Checking & Inspecting Arrays ========================================================================================================
+
+
+| Function                        | Parameters           | Explanation                    |
+| ------------------------------- | -------------------- | ------------------------------ |
+
+| **np.shape(array)**             | —                    | Returns shape of array         |
+
+| **np.size(array)**              | —                    | Number of elements             |
+
+| **np.ndim(array)**              | —                    | Number of dimensions           |
+
+| **np.dtype(array)**             | —                    | Data type of array             |
+
+| **np.itemsize(array)**          | —                    | Size (in bytes) of one element |
+
+| **np.reshape(array, newshape)** | reshape to new shape | Changes the array shape        |
+
+| **np.ravel(array)**             | —                    | Flattens array to 1D           |
+
+| **np.flatten(order='C')**       | —                    | Returns flattened copy         |
+
+
+
+======================================= 4. Array Math Operations ============================================================
+
+
+| Function                            | Parameters           | Explanation                   |
+| ----------------------------------- | -------------------- | ----------------------------- |
+
+| **np.add(x1, x2)**                  | elementwise addition | Adds two arrays               |
+
+| **np.subtract(x1, x2)**             | —                    | Subtracts array elements      |
+
+| **np.multiply(x1, x2)**             | —                    | Multiplies arrays elementwise |
+
+| **np.divide(x1, x2)**               | —                    | Divides arrays elementwise    |
+
+| **np.power(x1, x2)**                | —                    | Raises elements to powers     |
+
+| **np.mod(x1, x2)**                  | —                    | Modulus (remainder)           |
+
+| **np.exp(x)**                       | —                    | Exponential of each element   |
+
+| **np.sqrt(x)**                      | —                    | Square root of elements       |
+
+| **np.log(x)**                       | —                    | Natural log of elements       |
+
+| **np.log10(x)**                     | —                    | Base-10 logarithm             |
+
+| **np.sin(x), np.cos(x), np.tan(x)** | —                    | Trigonometric functions       |
+
+| **np.deg2rad(x), np.rad2deg(x)**    | —                    | Angle conversions             |
+
+
+
+
+================================== 5. Statistics & Data Analysis Functions ==================================================
+
+| Function                    | Parameters            | Explanation              |
+| --------------------------- | --------------------- | ------------------------ |
+
+| **np.mean(a, axis=None)**   | average value         | Mean across elements     |
+
+| **np.median(a, axis=None)** | median                | Median value             |
+
+| **np.std(a, axis=None)**    | std deviation         | Standard deviation       |
+
+| **np.var(a, axis=None)**    | variance              | Variance                 |
+
+| **np.min(a, axis=None)**    | —                     | Minimum value            |
+
+| **np.max(a, axis=None)**    | —                     | Maximum value            |
+
+| **np.argmin(a)**            | —                     | Index of min value       |
+
+| **np.argmax(a)**            | —                     | Index of max value       |
+
+| **np.percentile(a, q)**     | q: percentile (0–100) | Returns percentile value |
+
+| **np.quantile(a, q)**       | q: 0–1                | Similar to percentile    |
+
+| **np.corrcoef(a, b)**       | —                     | Correlation coefficient  |
+
+| **np.cov(a, b)**            | —                     | Covariance matrix        |
+
+| **np.sum(a, axis=None)**    | —                     | Sum of elements          |
+
+| **np.cumsum(a, axis=None)** | —                     | Cumulative sum           |
+
+| **np.prod(a, axis=None)**   | —                     | Product of elements      |
+
+
+========================================== 6. Array Manipulation Functions ===============================================
+
+| Function                             | Parameters     | Explanation                        |
+| ------------------------------------ | -------------- | ---------------------------------- |
+
+| **np.concatenate((a1, a2), axis=0)** | combine arrays | Joins arrays along an axis         |
+
+| **np.stack((a1, a2), axis=0)**       | stack arrays   | Stacks arrays into a new dimension |
+
+| **np.hstack((a1, a2))**              | —              | Horizontal stacking                |
+
+| **np.vstack((a1, a2))**              | —              | Vertical stacking                  |
+
+| **np.split(a, indices_or_sections)** | —              | Splits array into parts            |
+
+| **np.hsplit(a, n)**                  | —              | Split horizontally                 |
+
+| **np.vsplit(a, n)**                  | —              | Split vertically                   |
+
+| **np.transpose(a)**                  | —              | Transpose rows ↔ columns           |
+
+| **np.swapaxes(a, axis1, axis2)**     | —              | Swap axes                          |
+
+| **np.expand_dims(a, axis)**          | —              | Add a new axis                     |
+
+| **np.squeeze(a)**                    | —              | Remove single-dimensional entries  |
+
+
+======================================= 7. Boolean & Logical Operations ==============================================
+
+| Function                      | Parameters | Explanation                   |
+| ----------------------------- | ---------- | ----------------------------- |
+
+| **np.equal(x1, x2)**          | —          | Elementwise equality          |
+
+| **np.not_equal(x1, x2)**      | —          | Elementwise inequality        |
+
+| **np.greater(x1, x2)**        | —          | Greater than                  |
+
+| **np.less(x1, x2)**           | —          | Less than                     |
+
+| **np.logical_and(x1, x2)**    | —          | Logical AND                   |
+
+| **np.logical_or(x1, x2)**     | —          | Logical OR                    |
+
+| **np.logical_not(x)**         | —          | Logical NOT                   |
+
+| **np.where(condition, x, y)** | —          | Conditional selection         |
+
+| **np.any(a)**                 | —          | True if any element is True   |
+
+| **np.all(a)**                 | —          | True if all elements are True |
+
+======================================== 8. Linear Algebra (Essential for ML & DS) =======================================
+
+| Function                  | Parameters | Explanation                     |
+| ------------------------- | ---------- | ------------------------------- |
+
+| **np.dot(a, b)**          | —          | Dot product                     |
+
+| **np.matmul(a, b)**       | —          | Matrix multiplication           |
+
+| **np.linalg.inv(a)**      | —          | Inverse of matrix               |
+
+| **np.linalg.det(a)**      | —          | Determinant                     |
+
+| **np.linalg.eig(a)**      | —          | Eigenvalues & eigenvectors      |
+
+| **np.linalg.solve(a, b)** | —          | Solves linear equation `Ax = b` |
+
+| **np.trace(a)**           | —          | Sum of diagonal elements        |
+
+| **np.diag(a)**            | —          | Extracts diagonal               |
+
+| **np.identity(n)**        | —          | Identity matrix                 |
+
+====================================== 9. Cleaning / Handling Missing Data ==============================================
+
+| Function                      | Parameters | Explanation               |
+| ----------------------------- | ---------- | ------------------------- |
+
+| **np.isnan(a)**               | —          | Checks NaN values         |
+
+| **np.isfinite(a)**            | —          | True for finite numbers   |
+
+| **np.isinf(a)**               | —          | True for infinite numbers |
+
+| **np.nan_to_num(a, nan=0.0)** | —          | Replace NaN with number   |
+
+| **np.nanmean(a)**             | —          | Mean ignoring NaN         |
+
+| **np.nanstd(a)**              | —          | Std ignoring NaN          |
+
+| **np.nansum(a)**              | —          | Sum ignoring NaN          |
+
+
+========================================== 10. Sorting & Searching =====================================================
+
+| Function                                                  | Parameters | Explanation                               |
+| --------------------------------------------------------- | ---------- | ----------------------------------------- |
+
+| **np.sort(a, axis=-1)**                                   | —          | Sort array elements                       |
+
+| **np.argsort(a)**                                         | —          | Returns indices of sorted elements        |
+
+| **np.unique(a, return_index=False, return_counts=False)** | —          | Unique elements                           |
+
+| **np.searchsorted(a, v)**                                 | —          | Find index where value should be inserted |
+
+==================================== 11. File I/O (Importing & Exporting Data) ===========================================
+
+| Function                                                            | Parameters | Explanation                      |
+| ------------------------------------------------------------------- | ---------- | -------------------------------- |
+
+| **np.loadtxt(fname, delimiter=None, skiprows=0)**                   | —          | Load data from text file         |
+
+| **np.genfromtxt(fname, delimiter, missing_values, filling_values)** | —          | Load with missing value handling |
+
+| **np.savetxt(fname, X, delimiter=',')**                             | —          | Save array to text file          |
+
+| **np.save(filename, arr)**                                          | —          | Save array to `.npy` binary      |
+
+| **np.savez(filename, arr1, arr2)**                                  | —          | Save multiple arrays             |
+
+| **np.load(filename)**                                               | —          | Load `.npy` or `.npz` file       |
+
+======================================= 12. Random Module (Data Simulation) ==================================================
+
+| Function                                                 | Parameters | Explanation                  |
+| -------------------------------------------------------- | ---------- | ---------------------------- |
+
+| **np.random.seed(n)**                                    | —          | Set seed for reproducibility |
+
+| **np.random.choice(a, size=None, replace=True, p=None)** | —          | Random selection             |
+
+| **np.random.shuffle(a)**                                 | —          | Shuffle in-place             |
+
+| **np.random.permutation(a)**                             | —          | Random permutation           |
+
+| **np.random.normal(loc=0, scale=1, size=None)**          | —          | Normal distribution          |
+
+| **np.random.uniform(low=0, high=1, size=None)**          | —          | Uniform distribution         |
+
+=================================== 13. Advanced (Broadcasting, Masking, Indexing) ==========================================
+
+| Function                             | Parameters | Explanation                  |
+| ------------------------------------ | ---------- | ---------------------------- |
+
+| **np.meshgrid(x, y)**                | —          | Create coordinate matrices   |
+
+| **np.broadcast_to(array, shape)**    | —          | Broadcast array to new shape |
+
+| **np.ma.masked_where(condition, a)** | —          | Mask elements by condition   |
+
+| **np.take(a, indices)**              | —          | Take elements by index       |
+
+| **np.put(a, indices, values)**       | —          | Replace values by index      |
+
+=============================================================================================================================
+
+✅ Summary (for Data Science use):
+
+Import / Export: np.loadtxt, np.genfromtxt, np.save
+
+Data creation: np.array, np.arange, np.linspace
+
+Descriptive stats: np.mean, np.median, np.std, np.percentile
+
+Linear algebra: np.dot, np.linalg.inv, np.linalg.eig
+
+Random data: np.random.normal, np.random.randint
+
+Missing values: np.isnan, np.nanmean
+
+Reshape & Combine: np.reshape, np.concatenate
+
+Performance checks: np.dtype, np.ndim, np.size
+
+========================================================================================================================

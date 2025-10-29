@@ -1,0 +1,15 @@
+Both Label encoder and Ordinal encoder converts the categorical data into
+numerical based on Alphabetical order but Label encoder handles the null data
+but Ordinal encoder does not handle the null data
+
+### 1.Then when we go for Label encoder and when we go for Ordinal encoder?
+
+        Label encoder                             ordinal encoder
+     --------------------------------------------------------------------
+1.it designed only for "Target"          1.Used to encode "Feature columns"
+  variables                                especially when "Meaningful order"
+
+2.Converts category to numerical         2. Converts category to numerical
+  based on "Alphabetical order"             based on "Alphabetical order" but
+                                            We can and should "override" this if
+                                            there is a true "ordinal relationship"

@@ -1,0 +1,103 @@
+### 1.When to go for standard scaler and when to go for min max scaler?
+
+***When deciding between StandardScaler and MinMaxScaler, the choice
+largely depends on the "Distribution" and "Range of your data",
+as well as the "Type of model you're using"
+
+-----------------------------StandardScaler:---------------------------------
+
+------When to use it:------
+
+***Gaussian Distribution:(Normal Distribution)
+It works well when the data is approximately normally distributed
+(bell-shaped curve). Since it centers the data around zero and scales it
+based on standard deviation, it assumes the underlying data distribution
+is Gaussian.
+
+***Algorithms sensitive to variance:
+This scaler is typically a better choice for algorithms that assume normally
+distributed data or those that are sensitive to the scale, like:
+
+--> Linear regression
+--> Logistic regression
+--> Support vector machines (SVM)
+--> K-means clustering
+--> Principal Component Analysis (PCA)
+
+***Outliers:
+StandardScaler is sensitive to outliers because they influence the mean and
+standard deviation, so if your dataset has significant outliers, the scaler
+will be affected.
+
+Advantages:
+
+It handles data that has large variations in scale well because it
+standardizes everything to the same scale (mean = 0, variance = 1).
+
+It works well with algorithms that assume Gaussian distribution, and is
+especially beneficial for distance-based algorithms (like SVM, KNN).
+
+Disadvantages:
+
+Sensitive to outliers:
+Outliers can heavily affect the mean and standard deviation, distorting
+the scaling of the data.
+
+Assumes normality, so it might not be ideal for data that is skewed or has a
+non-Gaussian distribution.
+
+------------------------------MinMaxScaler-----------------------------------
+
+-----------When to use it:-------
+
+***Non-Gaussian or skewed distributions:
+If your data has a skewed distribution, the MinMaxScaler is often a better
+choice because it works well even when data is not normally distributed.
+
+***Algorithms sensitive to data scaling:
+It is a good choice for algorithms where scaling to a specific range is
+required, such as:
+
+--> Neural networks (especially deep learning models)
+--> Gradient-based algorithms
+--> K-nearest neighbors (KNN), because it uses distance metrics, which are
+    sensitive to the range.
+--> Principal Component Analysis (PCA) in some cases.
+
+***Bounded range required:
+If your machine learning model requires input features to be in a specific
+range (e.g., neural networks usually work better when the input is between
+0 and 1), then MinMaxScaler is ideal.
+
+Advantages:
+
+Preserves the relationships between data points:
+If the range is important (e.g., preserving distances between points in a
+dataset), MinMaxScaler helps retain that.
+
+Does not assume a specific data distribution, so it works well for skewed
+data or data with non-Gaussian distribution.
+
+Good for neural networks:
+Helps improve convergence speed when using neural networks.
+
+Disadvantages:
+
+Sensitive to outliers:
+The presence of outliers can skew the MinMax scaling, as they will distort
+the minimum and maximum values.
+
+No robustness to outliers:
+If your dataset contains outliers, they will dominate the scaling,
+potentially leading to issues where the majority of your data is compressed
+into a small range.
+
+
+| **Aspect**                | **StandardScaler**                         | **MinMaxScaler**                                               |
+| ------------------------- | ------------------------------------------ | -------------------------------------------------------------- |
+| **Method of Scaling**     | Z-score (mean = 0, std dev = 1)            | Scales between a fixed range (typically [0, 1])                |
+| **Assumptions**           | Assumes data is approximately normal       | Does not assume any specific distribution                      |
+| **Sensitive to Outliers** | Yes, outliers affect mean and std dev      | Yes, outliers affect the min and max values                    |
+| **Use Case**              | Normal distribution, distance-based models | Non-normal distribution, neural networks, bounded range models |
+| **Best for**              | Linear models, SVM, K-means, PCA           | Neural networks, KNN, non-Gaussian data                        |
+| **Output Range**          | No fixed range (values can be negative)    | Fixed range (often [0, 1])                                     |

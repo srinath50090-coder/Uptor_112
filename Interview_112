@@ -1,0 +1,106 @@
+1.Machine learning:
+      It is kind of algorithm that takes data, finds the pattern ,insightful,details
+about the data and used for either "Prediction" or "Analysis"
+
+2.How to achieve this?
+      Process of doing thing on machine learning is done via libraries and many
+software language.
+
+Python,scikit-learn (best used combination)
+
+3.What is data science?
+      Process of finding insights,details, forecast, prediction about the data
+(structured or unstructured ) via a algorithm and model is called data science.
+
+Data science can be achieved using either "Machine learning" or "Deep learning"
+
+
+4.what is the library which we can use for file reading?
+ import csv
+ import pandas
+
+ Note:Pandas is widely used considering its easy reading option
+
+ 5.what are all the different file that can be reading using pandas
+
+ csv,excel,JSON(JavaScript Object Notation)...
+
+ 6.Is it necessary to create virtual environment?
+ Yes!!
+
+ Virtual environment can be created using following two mechanism.
+
+ 1.through pycharm
+ 2.through command line prompt (h.w)
+
+What is StandardScaler and MinMaxScaler
+
+Both of this called Feature Scaling
+Feature ---> input or x data or independent data
+Scaling ---> Converting one form of numbers into another form of numbers
+
+This Feature Scaling can be achieved by two libraries
+
+1.from.sklearn preprocessing import StandardScaler
+2.from.sklearn preprocessing import MinMaxScaler
+
+
+StandardScaler ---> Returns the output in Normal distribution
+MinMaxScaler ---> Returns the output in Uniform Distribution
+
+StandardScaler value will be between -1 to 1
+MinMaxScaler value will be between 0 to 1
+
+When to use these feature scaling?
+
+When we have different unit of measurement for different column , then model may not
+perform well as expected.So we will be using to ensure all the columns stay in the
+accepted distribution
+
+Where it is used ?
+
+Feature Scaling is used or can be used anywhere but specifically it should be used in
+"Distance based algorithm"
+
+When StandardScaler and MinMaxScaler :
+
+StandardScaler :(KNN,SVM,KMeans,Hierarchical Clustering)
+In all distance based algorithm
+
+MinMaxScaler :
+In all neural network based algorithms (Deep learning)
+
+Note:Algorithms like Decision Tree,Random Forest,Linear Regression and
+Logistic Regression may not scaling
+
+
+11-October-2025
+
+What is Parametric and Non-Parametric Algorithms ?
+
+Parametric : Column Based
+        Linear Regression , Logistic Regression
+        Technical answer : Finding the relationship just by the variance factor
+        Laymen : Assumption
+
+Non-Parametric : Column and Row
+        Decision Tree , Random Forest
+        Technical Answer : Finding the relationship but it goes deeper by the rows
+        Laymen : Non-Assumption
+
+What is Variance, Co-Variance, Co-relation ?
+
+Variance - Within Column
+Co-Variance - Between Column
+Co-relation - Between Column but it may go some conversation before finding it
+
+           -1 ---> negative co-relation
+           +1 ---> positive co-relation
+            0 ---> Poor
+
+co-relation matrix defines same relationship number in matrix format and same can
+be seen using the visualization chart :
+
+          Answer: HEATMAP
+
+What is bias-variance tradeoff?

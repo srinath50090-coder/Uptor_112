@@ -1,0 +1,39 @@
+Visualization:
+   Process of representing the data in the form graph or flow chart
+
+In python Visualization can be achieved by four different libraries :
+
+1.matplotlib
+2.seaborn
+3.plotly
+4.dash
+
+Installation:
+
+pip install matplotlib
+pip install seaborn
+
+
+External tool for visualization : Power BI and Tableau
+
+Focus : Power BI
+
+Visualization :
+
+1.matplotlib can works on its own
+2.seaborn is built on to of matplotlib so when we use seaborn
+we need to use both seaborn and matplotlib
+
+Visualization Types:
+
+1.Uni-Variate ---> Only with one input
+2.Bi-Variate ---> With two input (x and y)
+
+Dimension : We will focussing on only two dimensional images
+
+Visualization :
+
+1.number vs number (x numeric and y numeric)
+2.number vs category (x category and y numeric)
+3.number only (uni-Variate)
+
